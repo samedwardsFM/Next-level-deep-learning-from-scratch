@@ -20,7 +20,7 @@ A network built with this library has the following features and capablities:
 - Produce validation predictions for each epoch
 ## Training sample
 A full model training and hyperparameter optimization code and runs can be found in `Training sample.ipynb`. Dataset used is fashion mnist with dimensionality reduced data and can be found in `.\input` folder.<br>
-The final model achieves 89.96% test accuracy.
+The final model achieves **89.96%** test accuracy.
 ## Sample code
 ```python
 # import deep learning class
