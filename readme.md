@@ -8,6 +8,7 @@ This repo includes code for my <b><i>Next level deep learning from scratch</b></
 ## Features and capablities
 A network built with this library has the following features and capablities:
 - Simple, keras-like usage form
+- GPU support through CuPy
 - Construct multilayer neural networks
 - Choice of many popular activation functions (sigmoid, tanh, relu, lrelu, elu and softmax)
 - Choice of loss function (softmax_cross_entropy or MSE) or add your own loss.
