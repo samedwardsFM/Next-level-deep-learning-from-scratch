@@ -25,8 +25,6 @@ The final model achieves **89.96%** test accuracy.
 ```python
 # import deep learning class
 from DeepLearning import NN, Layers, Utils, Losses, Optimizers, Regularizers, Metrics
-import numpy as np
-import cupy as cp
 
 # read training (100 samples), validation and test data
 # .
