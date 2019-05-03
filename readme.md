@@ -5,6 +5,18 @@ This repo includes code for my <b><i>Next level deep learning from scratch</b></
 - Numpy
 - matplotlib
 - CuPy (optional)
+## Features and capablities
+A network built with this library has the following features and capablities:
+- Simple, keras-like usage form
+- Construct multilayer neural networks
+- Choice of many popular activation functions (sigmoid, tanh, relu, lrelu, elu and softmax)
+- Choice of loss function (softmax_cross_entropy or MSE) or add your own loss.
+- Choice of different optimizers (SGD, AdaGrad or RMSProp) or add your own optimizer
+- Choice of different regularizers (l1 or l2) or add your own regularizer
+- Batch normalization
+- Mini-btach
+- Dropout
+- Produce validation predictions for each epoch
 ## Sample code
 ```python
 # import deep learning class
@@ -12,7 +24,10 @@ from DeepLearning import NN, Layers, Utils, Losses, Optimizers, Regularizers, Me
 import numpy as np
 import cupy as cp
 
-# read training (100 samples) and validation data
+# read training (100 samples), validation and test data
+# .
+# .
+# .
 
 # define model hyperparameters
 clf = NN(Losses.softmax_cross_entropy,
@@ -24,6 +39,7 @@ clf.add(Layers.Dense(96, activation='lrelu', batch_norm=(0.99, 0.001, 1e-5)))
 clf.add(Layers.Dense(64, activation='lrelu', batch_norm=(0.99, 0.001, 1e-5)))
 clf.add(Layers.Dense(10, activation='softmax'))
 
+# training network
 result = clf.fit(x_train,
                  y_train,
                  learning_rate=0.01,
@@ -33,4 +49,9 @@ result = clf.fit(x_train,
                  gamma=0.0,
                  decay=0.9,
                  validation=(x_val, y_val))
+                 
+loss, acc, val_loss, val_acc = result['Loss'], result['Accuracy'], result['Val Loss'], result['Val Accuracy']
+
+# make predictions
+y_pred = clf.predict(x_test)
 ```
