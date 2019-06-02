@@ -15,7 +15,7 @@ A network built with this library has the following features and capablities:
 - Choice of different optimizers (SGD, AdaGrad or RMSProp) or add your own optimizer
 - Choice of different regularizers (l1 or l2) or add your own regularizer
 - Batch normalization
-- Mini-btach
+- Mini-batch
 - Dropout
 - Produce validation predictions for each epoch
 ## Training sample
